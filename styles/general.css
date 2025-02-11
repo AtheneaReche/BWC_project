@@ -11,8 +11,8 @@
     font-size: 9.375rem;
     font-weight: 700;
     font-style: normal;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: var(--Color2, #59380D);
+    -webkit-text-stroke-color: #59380D;
+    -webkit-text-stroke-width: 3px;
 }
 .subtitle{
     font-family: "Roboto", serif;
@@ -46,3 +46,54 @@
     color: #F2C379;
 }
 /* END COLORS */
+
+/* BUTTONS */
+.general_button{
+    width: 12.6rem;
+    height: 4rem;
+    border-radius: 1.875rem;
+    border: 3px solid #59380D;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #59380D;
+    font-weight: 700;
+}
+.general_button:hover{
+    background-color: #E1A8A8;
+    border: .1875rem solid #E1A8A8;
+    color: #F5ECD7;
+    cursor: pointer;
+}
+.secondary_button{
+    width: 18.2rem;
+    height: 4rem;
+    background-color: transparent;
+    border-radius: 1.875rem;
+    border: 3px solid #FF8A58;
+    color: #FF8A58;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.secondary_button:hover{
+    background-color: #FF8A58;
+    color: #F5ECD7;
+    cursor: pointer;
+
+}
+.search_button{
+    width: 12.6rem;
+    height: 4rem;
+    border-radius: 1.875rem;
+    border: none;
+    background-color: #E1A8A8;
+    color: #F5ECD7;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.search_button:hover{
+    background-color: transparent;
+    border: 3px solid #E1A8A8;
+    color: #E1A8A8;
+    cursor: pointer;
+}
+/* END BUTTONS */
