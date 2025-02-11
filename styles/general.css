@@ -1,0 +1,48 @@
+/* GENERIC */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* END GENERIC */
+
+/* FONTS */
+.title{
+    font-family: "KyivType Sans", sans-serif;
+    font-size: 9.375rem;
+    font-weight: 700;
+    font-style: normal;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: var(--Color2, #59380D);
+}
+.subtitle{
+    font-family: "Roboto", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
+}
+.text{
+    font-family: "Roboto", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* END FONTS */
+
+/* COLORS */
+.bg_c_Beige{
+    color: #F5ECD7;
+}
+.c_Brown{
+    color: #59380D;
+}
+.c_Pink{
+    color: #E1A8A8;
+}
+.c_Orange{
+    color: #FF8A58;
+}
+.c_Yellow{
+    color: #F2C379;
+}
+/* END COLORS */
