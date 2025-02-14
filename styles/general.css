@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 /* END GENERIC */
 
 /* FONTS */
@@ -16,7 +17,7 @@
 }
 .subtitle{
     font-family: "Roboto", serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     font-style: normal;
 }
@@ -31,7 +32,7 @@
 
 /* COLORS */
 .bg_c_Beige{
-    color: #F5ECD7;
+    background-color: #F5ECD7;
 }
 .c_Brown{
     color: #59380D;
