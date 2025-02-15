@@ -43,6 +43,9 @@
 .bg_c_Beige{
     background-color: var(--c-Beige);
 }
+.c_Beige{
+    color: var(--c-Beige);
+}
 .c_Brown{
     color: var(--c-Brown);
 }

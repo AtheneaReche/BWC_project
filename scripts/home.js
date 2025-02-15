@@ -1,5 +1,5 @@
 
-
+import { createFooter } from "./footer.js";
 /* Inicio Segunda parte de la Home */
 
 /* SECCION RECOMENDADOS */
@@ -95,3 +95,7 @@ function createNewsSection(array){
 }
 
 createNewsSection(newsTitles)
+
+/*SECCION FOOTER  */
+const footer=document.querySelector(".footer");
+createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
