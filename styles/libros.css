@@ -1,0 +1,113 @@
+@import url('general.css');
+
+/* Seccion busqueda */
+.section__search{
+    padding: 50px 0px;
+}
+.section__search-title{
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.search__container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.search__container-inputs {
+    /* display: flex; */
+    border: 2px solid brown;
+    border-radius: 20px;
+    background-color: #f8f0dc;
+}
+.search__container-input::placeholder{
+    color:var(--c-Yellow) ;
+}
+.search__container-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: orange;
+    min-width: 150px
+}
+
+.search__container input:first-child {
+    border-right: 2px solid brown;
+}
+
+
+/* Seccion sugerencia*/
+.section__tips{
+    /* margin: 0 auto; */
+    text-align: center;
+}
+.section__tip-title{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.section__tip-option{
+    border: 2px solid orange;
+    border-radius: 30px;
+    padding: 20px 0px;
+    margin: 0 auto;
+    width: 60%;
+    max-width:500px ;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.section__tip-option div{
+    width: 45%;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;
+}
+
+/* Seccion resultados */
+.section__search-results{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows:300px ;
+    gap: 40px;
+}
+.search__result-book{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--c-Orange);
+    border-radius: 10px;
+}
+.search__result-book_inf{
+    width: 50%;;
+}
+.search__result-book_inf p:nth-child(2){
+    margin-bottom: 5px;
+}
+.search__result-book_img{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.search__result-book_img img{
+    height:80%;
+    width: 95%;
+}
+.result-book_inf-title{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.min-height{
+    height: 50vh;
+}
+.d-none{
+    display: none;
+}
