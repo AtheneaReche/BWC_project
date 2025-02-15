@@ -2,7 +2,7 @@
 
 /* Seccion busqueda */
 .section__search{
-    padding: 50px 0px;
+    padding: 30px 0px 50px 0px;
 }
 .section__search-title{
     padding-bottom: 40px;
@@ -43,31 +43,24 @@
 
 /* Seccion sugerencia*/
 .section__tips{
-    /* margin: 0 auto; */
     text-align: center;
+    padding:20px 0px 50px 0px;
 }
 .section__tip-title{
     font-size: 36px;
     margin-bottom: 30px;
 }
-.section__tip-option{
-    border: 2px solid orange;
-    border-radius: 30px;
-    padding: 20px 0px;
+
+.section__tips .search__result-book{
     margin: 0 auto;
-    width: 60%;
-    max-width:500px ;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
+    height: 300px;
+    width:50%;
+    max-width: 450px;
 }
-.section__tip-option div{
-    width: 45%;
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center;
+.section__tips .search__result-book_img{
+    width: 40%;
 }
+
 
 /* Seccion resultados */
 .section__search-results{
@@ -110,4 +103,15 @@
 }
 .d-none{
     display: none;
+}
+
+.loading_data{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--c-Brown);
+    font-family: "Roboto", serif;
+    font-weight: 400;
 }

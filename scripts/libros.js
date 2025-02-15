@@ -17,8 +17,9 @@ function createSearch(){
     const searchBtn=document.querySelector(".search_button");
    
     searchBtn.addEventListener("click",()=>{
-        sectionTips.classList.add("d-none")
-        sectionSearchResults.innerHTML=`BUSCANDO`
+        sectionTips.classList.add("d-none");
+        loadingData(sectionSearchResults)
+        /* sectionSearchResults.innerHTML=`BUSCANDO` */
         const searchByName=document.querySelector(".search__container-input_name").value;
         const searchByAuthor=document.querySelector(".search__container-input_author").value;
         searchBook(searchByName,searchByAuthor);
@@ -40,24 +41,20 @@ function searchBook(name,author){
      }
      else {
         let randomNumber = Math.floor(Math.random() * 971); 
-        url += `q=book&limit=20&offset=${randomNumber}`;  // Si no hay filtros, buscar libros generales
+        url += `q=book&limit=20&offset=${randomNumber}`;
     }
-    console.log(url)
-
-
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                    createResultsCarts(data);
+                    sectionSearchResults.classList.remove("loading_data")
+                    sectionSearchResults.innerHTML=" "
+                    data.docs.forEach(libro=>{createResultsCarts(libro,sectionSearchResults)});
                 })
                 .catch(error => console.error('Error al obtener los datos:', error));
 }
 
-function createResultsCarts(data){
-    console.log(data.docs)
-    sectionSearchResults.innerHTML=" "
-    data.docs.forEach(libro => {
+function createResultsCarts(libro,seccion){
         let cantAutor= libro.author_name ? (libro.author_name.length > 1 ? "Autores" : "Autor") : "Autor desconocido";
         let autor;
         if (libro.author_name && libro.author_name.length > 3) {
@@ -71,9 +68,9 @@ function createResultsCarts(data){
         }else{
             imgLibro=`https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`
         }
-        const div=document.createElement("div");
-        div.classList.add("search__result-book")
-        div.innerHTML = `
+        const article=document.createElement("article");
+        article.classList.add("search__result-book")
+        article.innerHTML = `
                     <div class=search__result-book_inf>
                     <h3 class="result-book_inf-title c_Brown">${libro.title}</h3>
                     <p><strong>${cantAutor}:</strong> ${autor}</p>
@@ -82,8 +79,7 @@ function createResultsCarts(data){
                     <div class="search__result-book_img">
                     <img src="${imgLibro}" alt="Portada del libro" onerror="this.style.display='none'"> </div>
                 `;
-            sectionSearchResults.appendChild(div)
-    });
+            seccion.appendChild(article)
 }
 
 /* Seccion Recomendado */
@@ -92,7 +88,9 @@ function searchTip(){
     const title=document.createElement("h2");
     title.classList.add("section__tip-title","c_Orange")
     title.textContent="Nuestra sugerencia";
-    sectionTips.appendChild(title)
+    const div=document.createElement("div");
+    loadingData(div)
+    sectionTips.append(title,div)
     let randomNumber = Math.floor(Math.random() * 971); 
     let url = `https://openlibrary.org/search.json?q=book&limit=1&offset=${randomNumber}`;
     fetch(url)
@@ -101,26 +99,15 @@ function searchTip(){
         console.log(data.docs)
         return data.docs;})
     .then(docs=>{
-        createSectionTips(docs)
+        div.remove()
+        sectionTips.classList.remove("min-height")
+        createResultsCarts(docs[0],sectionTips)
     })
 }
-function createSectionTips(libro){
-    sectionTips.classList.remove("min-height")
-    let article=document.createElement("article");
-    article.classList.add("section__tip-option")
-    article.innerHTML=`
-                <div>
-                        <img src="https://covers.openlibrary.org/b/id/${libro[0].cover_i}-M.jpg" alt="">
-                </div>
-                <div>
-                        <h3>${libro[0].title}</h3>
-                        <h4>${libro[0].author_name}</h4>
-                </div>`
 
-    let btn=document.createElement("button");
-    btn.classList.add("section__tip-btn", "secondary_button")
-    btn.textContent="Sugiéreme otro"
-    sectionTips.append(article)
+function loadingData(seccion){
+    seccion.classList.add("loading_data");
+    seccion.innerHTML="Realizando busqueda. Puede tardar unos segundos.."
 }
 
 createSearch();
