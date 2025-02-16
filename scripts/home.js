@@ -1,3 +1,5 @@
+
+import { createFooter } from "./footer.js";
 /* HOME'S FIRST PART */
     /** HERO SECTION */
         const title = [
@@ -129,3 +131,7 @@ function createNewsSection(array){
 }
 
 createNewsSection(newsTitles)
+
+/*SECCION FOOTER  */
+const footer=document.querySelector(".footer");
+createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
