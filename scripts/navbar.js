@@ -8,7 +8,7 @@ function navbar() {
         logoContainer.classList.add("logo-container"); 
 
     const logo = document.createElement("img");
-        logo.src = "../images/BWC_prim.png";
+        logo.src = "./images/BWC_prim.png";
         logo.alt = "Home";
 
     const logoLink = document.createElement("a");
@@ -22,7 +22,7 @@ function navbar() {
 
     const links = [
         { text: "Libros", url: "#" },
-        { text: "Eventos", url: "events.html" },
+        { text: "Eventos", url: "./pages/events.html" },
         { text: "Contacto", url: "#" }
     ];
 
