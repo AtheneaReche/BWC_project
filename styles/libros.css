@@ -98,6 +98,21 @@
     margin-bottom: 10px;
 }
 
+.book_inf-btn{
+    margin-top: 30px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-size:15px;
+    border: 3px solid var(--c-Yellow);
+    background-color: var(--c-Yellow);
+    transition: .5s background-color;
+    color: var(--c-Brown);
+}
+.book_inf-btn:hover{
+    background-color: transparent;
+    border: 3px solid var(--c-Orange);
+}
+
 .min-height{
     height: 50vh;
 }
