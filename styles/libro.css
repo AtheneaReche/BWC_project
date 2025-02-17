@@ -1,0 +1,49 @@
+@import url('general.css');
+
+.back__container{
+    padding: 30px 0px 10px 50px;
+    
+}
+.back__container a{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--c-Orange);
+    padding: 10px 30px;
+    transition: .4s background-color;
+}
+.back__container a:hover{
+    background-color: var(--c-Orange);
+    color: var(--c-Beige);
+}
+
+.page__cart-book_title{
+    text-align: center;
+    margin-top: 20px;
+}
+.section__cart-book_details{
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+.cart-book_details-image{
+    text-align: center;
+    height: 250px;
+}
+.cart-book_details-image img{
+    height: 95%;
+}
+.cart-book_details-text{
+    text-align: justify;
+    font-size: 18px;
+    font-family: "Roboto", serif;
+}
+.cart-book_details-text p{
+    margin: 5px 0px;
+}
+.book_details-text__title{
+    margin: 10px 0px 20px 0px;
+    text-align:center ;
+    font-size: 30px;
+}

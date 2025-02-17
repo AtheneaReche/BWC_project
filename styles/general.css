@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 /* END GENERIC */
 
@@ -78,13 +79,12 @@
     cursor: pointer;
 }
 .secondary_button{
-    width: 18.2rem;
-    height: 4rem;
+    padding: 12px 60px;
     background-color: transparent;
     border-radius: 1.875rem;
     border: 3px solid var(--c-Orange);
     color: var(--c-Orange);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 .secondary_button:hover{
@@ -94,14 +94,14 @@
 
 }
 .search_button{
-    width: 12.6rem;
-    height: 4rem;
-    border-radius: 1.875rem;
+    padding: 10px 40px;
+    border-radius: 25px;
     border: none;
     background-color: var(--c-Pink);
     color: var(--c-Beige);
     font-size: 1.5rem;
     font-weight: 700;
+    transition: .8s background-color, .6s color;
 }
 .search_button:hover{
     background-color: transparent;
