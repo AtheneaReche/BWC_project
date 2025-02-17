@@ -1,9 +1,9 @@
-/* Seleccion en html */
+/* Seleccion en el HTML */
 const sectionSearch = document.querySelector(".section__search");
 const sectionSearchResults = document.querySelector(".section__search-results");
 const sectionTips = document.querySelector(".section__tips");
 
-/*Seccion de BUSQUEDA*/
+/*SECCION DE BUSQUEDA*/
 function createSearch() {
     sectionSearch.innerHTML = `
                 <h1 class="section__search-title subtitle c_Brown">Busca un libro</h1>
@@ -45,13 +45,13 @@ function searchBook(name, author) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             sectionSearchResults.classList.remove("loading_data")
             sectionSearchResults.innerHTML = " "
             data.docs.forEach(libro => { createResultsCarts(libro, sectionSearchResults) });
         })
         .catch(error => console.error('Error al obtener los datos:', error));
 }
+
 
 function createResultsCarts(libro, seccion) {
     let cantAutor = libro.author_name ? (libro.author_name.length > 1 ? "Autores" : "Autor") : "Autor desconocido";
@@ -61,33 +61,47 @@ function createResultsCarts(libro, seccion) {
     } else {
         autor = libro.author_name ? libro.author_name.join(", ") : "Autor desconocido";
     }
+    let title;
+    if(libro.title.length>40){
+        title=libro.title.slice(0, 40) + "...";
+    }else{
+        title=libro.title
+    }
+    let keyButton
     let imgLibro;
     if (libro.cover_i == undefined) {
-        imgLibro = "../images/novedades.jpg"
+        imgLibro = "../images/novedades.jpg";
+        keyButton=Math.floor(Math.random() * 1000) + 1; /* para aquellos libros que no existia una clave existente en comun */
     } else {
-        imgLibro = `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`
+        imgLibro = `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`;
+        keyButton=libro.cover_i
     }
+
     const article = document.createElement("article");
     article.classList.add("search__result-book")
     article.innerHTML = `
                     <div class=search__result-book_inf>
-                    <h3 class="result-book_inf-title c_Brown">${libro.title}</h3>
-                    <p><strong>${cantAutor}:</strong> ${autor}</p>
-                    <p><strong>Año de Publicación:</strong> ${libro.first_publish_year || 'N/A'}</p>
-                    <button class="book_inf-${libro.cover_i} book_inf-btn" >Ver libro</button>
+                        <h3 class="result-book_inf-title c_Brown">${title}</h3>
+                        <p><strong>${cantAutor}:</strong> ${autor}</p>
+                        <p><strong>Año de Publicación:</strong> ${libro.first_publish_year || 'N/A'}</p>
+                        <button class="book_inf-${keyButton} book_inf-btn" >Ver libro</button>
                     </div>
                     <div class="search__result-book_img">
-                    <img src="${imgLibro}" alt="Portada del libro" onerror="this.style.display='none'"> </div>
+                        <img src="${imgLibro}" alt="Portada del libro" onerror="this.style.display='none'"> 
+                    </div>
         `;
 
     seccion.appendChild(article)
-    const btn = document.querySelector(`.book_inf-${libro.cover_i}`);
+    const btn = document.querySelector(`.book_inf-${keyButton}`);
     btn.addEventListener("click", () => {
-        createCartInfoBook(libro)
+        const bookKey = encodeURIComponent(libro.key);
+        const bookTitle = encodeURIComponent(libro.title || "Título no disponible");
+        const bookAuthor = encodeURIComponent(libro.author_name ? libro.author_name.join(", ") : "Autor desconocido");
+        window.open(`libro.html?book=${bookKey}&title=${bookTitle}&author=${bookAuthor}`, "_blank");
     })
 }
 
-/* Seccion Recomendado */
+/* SECCION RECOMENDADO */
 function searchTip() {
     sectionTips.classList.add("min-height")
     const title = document.createElement("h2");
@@ -101,7 +115,6 @@ function searchTip() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data.docs)
             return data.docs;
         })
         .then(docs => {
@@ -111,34 +124,12 @@ function searchTip() {
         })
 }
 
+
+/* Mensaje de cargando mientras se realiza la peticion a la API */
 function loadingData(seccion) {
     seccion.classList.add("loading_data");
     seccion.innerHTML = "Realizando busqueda. Puede tardar unos segundos.."
 }
 
-if (sectionSearch) {
-    createSearch();
-    searchTip();
-}
-
-function createCartInfoBook(libro){
-    const nuevaVentana = window.open("libro.html", "_blank");
-    nuevaVentana.onload = function () {
-        const sectionCartBook = nuevaVentana.document.querySelector(".section__cart-book");
-
-        // Crear el contenido
-        const div = nuevaVentana.document.createElement("div");
-        div.classList.add("cart-book__container");
-        div.innerHTML = `
-        <div>
-            <img src="https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg" alt="${libro.title}">
-        </div>
-        <div>
-            <h3>${libro.title}</h3>
-            <p><strong>Año de Publicación:</strong> ${libro.first_publish_year || 'N/A'}</p>
-        </div>`;
-
-        // Agregar el contenido a la nueva ventana
-        sectionCartBook.appendChild(div);
-    };
-}
+createSearch();
+searchTip();
