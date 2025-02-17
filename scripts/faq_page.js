@@ -1,14 +1,10 @@
 import { createFooter } from "./footer.js";
-/* EVENTS PAGE*/
-    /** HERO SECTION */
-    const title = [
+/* FAQ PAGE*/
+      /** HERO SECTION */
+      const title = [
         //Title, subtitle and button
         {
-            name: "Evento de lectura",
-            date: "21 de Enero ~ 21 de Febrero",
-            buttonAttentionCall: "¡Apúntate!",
-            url: "../pages/events.html",
-            img: "../images/hero_event_image.png"
+            name: "F.A.Q"
         }
     ]
     const sectionHero = document.querySelector('.section__hero');
@@ -20,13 +16,9 @@ import { createFooter } from "./footer.js";
             array.forEach(element => {
                 heroDiv.innerHTML += `
                     <div class = "hero__subtitle">
-                        <h1 class = "title c_Yellow">${element.name}</h1>
-                        <h2 class = "subtitle subtitle__padding c_Orange"> ${element.date} </h2>
-                        <button class = "general_button" onclick = "location.href = '../pages/events.html'"> ${element.buttonAttentionCall} </button>
+                        <h1 class = "title subtitle__padding c_Yellow">${element.name}</h1>
                     </div>
-                    <div class = "hero__image">
-                        <img src = "${element.img}" alt = "${element.name}">
-                    </div>
+                  
                     `
             })
             sectionHero.appendChild(heroDiv);
@@ -34,42 +26,8 @@ import { createFooter } from "./footer.js";
     heroItems(title);
     /** END HERO SECTION */
 
-    /** WHAT IS SECTION */
-    const whatisSubtitle = [
-        {
-            name: "¿En qué consiste?",
-            text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>\
-            In finibus  bibendum sapien, ac congue sem consequat et.<br>\
-            Vestibulum ac ultrices  turpis. Suspendisse blandit sem ligula, sed lobortis metus elementum eu.<br>\
-            Proin vitae porttitor orci. Proin quis lacus dapibus mi pharetra  mollis.<br>\
-            Nunc mauris sem, porttitor sed ante eget, ullamcorper commodo  ex.<br>\
-            Integer porttitor aliquam sapien, non aliquam leo elementum nec.<br>\
-            Cras in est vitae orci varius ullamcorper ut quis ligula.<br>\
-            Donec  ullamcorper justo diam, nec tempor ante pellentesque in. ",
-        }
-    ]
-
-    const sectionWhatis = document.querySelector(".section__whatis");
-
-    function whatisItems (array) {
-        let whatisDiv = document.createElement("div");
-            whatisDiv.classList.add("whatis__content");
-
-            array.forEach(element => {
-                whatisDiv.innerHTML += `
-                    <div class = "whatis__subtitle">
-                        <h3 class = "subtitle c_Orange subtitle__padding">${element.name}</h3>
-                        <p class = "text c_Brown subtitle__padding">${element.text}</p>
-                    </div>
-                `
-            })
-            sectionWhatis.appendChild(whatisDiv);
-    }
-    whatisItems(whatisSubtitle)
-    /** END WHAT IS SECTION */
-
-    /** FAQ SECTION */
-    const faq = [
+       /** FAQ SECTION */
+       const faq = [
         {
             name: "F.A.Q"
         }
@@ -82,12 +40,8 @@ import { createFooter } from "./footer.js";
 
         array.forEach(element => {
             faqDiv.innerHTML += `
-                <div class = "faq__content_title">
-                    <h3 class = "subtitle c_Orange subtitle__padding">${element.name}</h3>
-                    <a href = "../pages/faq_page.html" class = "faq__more c_Orange">Ver más</a>
-                </div>
-
                <div class="accordion" id="accordionExample">
+               
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                         <button class="text accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -113,14 +67,38 @@ import { createFooter } from "./footer.js";
                         </div>
                         </div>
                     </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="text accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Debo terminar un libro para empezar el siguiente o puedo llevar dos a la vez?
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="c_Orange accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="text accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Debo terminar un libro para empezar el siguiente o puedo llevar dos a la vez?
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="c_Orange accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                        </div>
+                    </div>
             </div>
             `
         })
         sectionFAQ.appendChild(faqDiv);
     }
     faqItems(faq);
-    /** END FAQ SECTION */
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
 createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
-/* END EVENTS PAGE*/
+    /** END FAQ SECTION */
