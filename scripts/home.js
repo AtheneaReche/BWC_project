@@ -1,5 +1,5 @@
 
-import { createFooter } from "./footer.js";
+ import { createFooter } from "./footer.js";
 /* HOME'S FIRST PART */
     /** HERO SECTION */
         const title = [
@@ -23,7 +23,7 @@ import { createFooter } from "./footer.js";
                         <div class = "hero__subtitle">
                             <h1 class = "title c_Yellow">${element.name}</h1>
                             <h2 class = "subtitle subtitle__padding c_Orange"> ${element.date} </h2>
-                            <button class = "general_button"> ${element.buttonAttentionCall} </button>
+                            <button class = "general_button" onclick = "location.href = '../pages/events.html'"> ${element.buttonAttentionCall} </button>
                         </div>
                         <div class = "hero__image">
                             <img src = "${element.img}" alt = "${element.name}">
@@ -127,11 +127,11 @@ function createNewsSection(array){
         image.style.backgroundImage=`url('${newsTitles[index].img}')`;
     })
     sectionNews.appendChild(div);
-    
+
 }
 
 createNewsSection(newsTitles)
 
-/*SECCION FOOTER  */
-const footer=document.querySelector(".footer");
-createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
+ /*SECCION FOOTER  */
+ const footer=document.querySelector(".footer");
+ createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
