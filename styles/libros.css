@@ -1,4 +1,9 @@
 @import url('general.css');
+@import url('footer.css');
+
+a{
+    text-decoration: none;
+}
 
 /* Seccion busqueda */
 .section__search{
@@ -17,7 +22,6 @@
 }
 
 .search__container-inputs {
-    /* display: flex; */
     border: 2px solid brown;
     border-radius: 20px;
     background-color: #f8f0dc;

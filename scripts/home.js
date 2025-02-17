@@ -98,4 +98,4 @@ createNewsSection(newsTitles)
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/libros.html","url",footer); //-------------------------INCORPORAR LINKS
