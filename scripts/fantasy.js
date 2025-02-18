@@ -23,7 +23,30 @@ function imprimirAutor(datos){
     
 }
 
+function imprimirLibros(datos) {
+    booksContainer.innerHTML = ""
 
+    datos.entries.forEach(element => {
+        fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(element.title)}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.docs.length > 0) { // Verifica si hay resultados
+                let coverID = data.docs[0].cover_i
+                let coverURL = coverID 
+                    ? `https://covers.openlibrary.org/b/id/${coverID}-M.jpg` 
+                    : "https://www.shutterstock.com/image-vector/image-icon-600nw-211642900.jpg" // Imagen por defecto
+
+                booksContainer.innerHTML += `
+                    <div class="card_book">
+                        <img src="${coverURL}" alt="${element.title}">
+                        <h3 class="text">${element.title}</h3>
+                    </div>
+                `
+            }
+        })
+        .catch(error => console.error("Error al obtener datos:", error))
+    });
+}
 
 
 
