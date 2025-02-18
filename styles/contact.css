@@ -1,0 +1,33 @@
+.title{
+    text-align: center;
+    font-size: 6rem !important;
+    padding-top: 5rem;
+}
+
+.contact__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+}
+
+.contact__input{
+    margin: 1rem;
+    padding: 1rem 7rem 1rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgba(89, 56, 13, 0.3);
+    
+}
+
+.contact__input::placeholder{
+    color: #59380D;
+    opacity: 1;
+}
+
+
