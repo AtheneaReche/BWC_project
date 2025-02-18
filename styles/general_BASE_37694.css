@@ -2,8 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-weight: 700;
 }
 /* END GENERIC */
 
@@ -20,14 +18,11 @@
 /* FONTS */
 .title{
     font-family: "KyivType Sans", sans-serif;
-    font-size: 8rem;
+    font-size: 9.375rem;
     font-weight: 700;
     font-style: normal;
     -webkit-text-stroke-color: var(--c-Brown);
     -webkit-text-stroke-width: 3px;
-        @media(max-width:768px){
-            font-size: 6rem;
-        }
 }
 .subtitle{
     font-family: "Roboto", serif;
@@ -47,9 +42,6 @@
 /* COLORS */
 .bg_c_Beige{
     background-color: var(--c-Beige);
-}
-.c_Beige{
-    color: var(--c-Beige);
 }
 .c_Brown{
     color: var(--c-Brown);
@@ -83,12 +75,13 @@
     cursor: pointer;
 }
 .secondary_button{
-    padding: 12px 60px;
+    width: 18.2rem;
+    height: 4rem;
     background-color: transparent;
     border-radius: 1.875rem;
     border: 3px solid var(--c-Orange);
     color: var(--c-Orange);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .secondary_button:hover{
@@ -98,14 +91,14 @@
 
 }
 .search_button{
-    padding: 10px 40px;
-    border-radius: 25px;
+    width: 12.6rem;
+    height: 4rem;
+    border-radius: 1.875rem;
     border: none;
     background-color: var(--c-Pink);
     color: var(--c-Beige);
     font-size: 1.5rem;
     font-weight: 700;
-    transition: .8s background-color, .6s color;
 }
 .search_button:hover{
     background-color: transparent;

@@ -1,0 +1,77 @@
+@import url('general.css');
+
+.subtitle__padding{
+    padding-bottom: 2rem;
+}
+.hero__content{
+    display: flex;
+    @media(max-width:992px){
+        display: block;
+    }
+}
+.hero__image img{
+    width: 32.5rem;
+    height: auto;
+     @media(max-width:992px){
+        width: 20rem;
+    } 
+}
+.faq__content_title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.faq__more{
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.faq__more:hover{
+    text-decoration: underline;
+    color: var(--c-Pink);
+}
+/** ACCORDION BOOTSTRAP */
+.accordion {
+    --bs-accordion-bg: #F5ECD7 !important;
+    --bs-accordion-border-radius: 1.5625rem !important;
+    --bs-accordion-inner-border-radius: 1.5625rem !important;
+    --bs-accordion-btn-padding-y: 1.75rem !important;
+}
+.accordion-button {
+    width: 100%;
+    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+    font-size: 1.25rem !important;
+    color: #59380D !important;
+    text-align: left;
+    background-color: #F5ECD7 !important;
+    border: 0;
+    border-radius: 1.3rem !important;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+
+  }
+  .accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+  }
+  .accordion-button:focus {
+    box-shadow: none !important;
+  }
+  .accordion-button:hover{
+    background-color: #E1A8A8 !important;
+    color: #F5ECD7 !important;
+  }
+  .button{
+    padding-right: 9px;
+  }
+  .accordion-item {
+    border: 3px solid #59380D !important;
+    margin-bottom: 1.5625rem;
+    border-radius: 1.5625rem;
+  }
+  .accordion-item:hover{
+    border: 3px solid #E1A8A8 !important;
+  }
+  .accordion-item:first-of-type {
+    border-top-left-radius: 1.5625rem !important;
+    border-top-right-radius: 1.5625rem !important;
+  }
+/** END ACCORDION BOOTSTRAP */
