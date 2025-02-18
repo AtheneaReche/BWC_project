@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: 700;
 }
 /* END GENERIC */
 
@@ -20,14 +19,11 @@
 /* FONTS */
 .title{
     font-family: "KyivType Sans", sans-serif;
-    font-size: 8rem;
+    font-size: 9.375rem;
     font-weight: 700;
     font-style: normal;
     -webkit-text-stroke-color: var(--c-Brown);
     -webkit-text-stroke-width: 3px;
-        @media(max-width:768px){
-            font-size: 6rem;
-        }
 }
 .subtitle{
     font-family: "Roboto", serif;
