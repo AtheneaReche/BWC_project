@@ -1,5 +1,9 @@
 @import url('general.css');
 
+a{
+    text-decoration: none;
+}
+
 .footer {
     background-color: var(--c-Pink);
 }
