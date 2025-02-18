@@ -2,8 +2,11 @@
 *{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     box-sizing: border-box;
+=======
     font-weight: 700;
+>>>>>>> 356508a8874b00c9ad43a57bb98ec0b058300bc1
 }
 /* END GENERIC */
 
