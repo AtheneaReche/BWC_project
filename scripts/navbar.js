@@ -22,7 +22,7 @@ function navbar() {
     const ul = document.createElement("ul");
 
     const links = [
-        { text: "Libros", url: "#" }, // Insert link here
+        { text: "Libros", url: "../pages/libros.html" }, // Insert link here
         { text: "Eventos", url: "../pages/events.html" },
         { text: "Contacto", url: "#" } // Insert link here
     ];

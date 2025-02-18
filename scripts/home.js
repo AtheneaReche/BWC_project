@@ -132,12 +132,7 @@ function createNewsSection(array){
 
 createNewsSection(newsTitles)
 
-<<<<<<< HEAD
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
 createFooter("../pages/libros.html","url",footer); //-------------------------INCORPORAR LINKS
-=======
- /*SECCION FOOTER  */
- const footer=document.querySelector(".footer");
- createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
->>>>>>> page-libros
+
