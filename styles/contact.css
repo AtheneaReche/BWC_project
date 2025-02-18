@@ -1,9 +1,9 @@
+/* TITLE */
 .title{
     text-align: center;
-    font-size: 6rem !important;
-    padding-top: 5rem;
+    font-size: 5.5rem !important;
 }
-
+/* CONTAINERS */
 .contact__container{
     display: flex;
     align-items: center;
@@ -13,21 +13,48 @@
 .contact__form{
     display: flex;
     flex-direction: column;
-    max-width: 40rem;
 }
 
+/* INPUTS */
+
 .contact__input{
+    box-sizing: border-box;
     margin: 1rem;
-    padding: 1rem 7rem 1rem 1.5rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    width: 25rem;
     border-radius: 1rem;
     border: none;
+    outline: none;
     background-color: rgba(89, 56, 13, 0.3);
-    
+    color: #59380D;
 }
 
 .contact__input::placeholder{
     color: #59380D;
-    opacity: 1;
+    opacity: .7;
 }
 
+.textarea{
+    padding-bottom: 10rem;
+    resize: none;
+    overflow: hidden;
+    max-height: none;
+}
 
+/* BUTTON */
+
+.contact__button{
+    background: none;
+    max-width: 25rem;
+    margin: 1rem;
+    padding: .4rem;
+    border-radius: .7rem;
+    border: 2px solid #59380D;
+    color: #59380D;
+    font-size: large;
+}
+
+.contact__button:hover{
+    background-color: rgba(89, 56, 13, 0.7);
+    color: #F5ECD7;
+}
