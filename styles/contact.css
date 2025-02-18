@@ -2,6 +2,7 @@
 .title{
     text-align: center;
     font-size: 5.5rem !important;
+    margin-bottom: 1rem;
 }
 /* CONTAINERS */
 .contact__container{
@@ -19,7 +20,7 @@
 
 .contact__input{
     box-sizing: border-box;
-    margin: 1rem;
+    margin: .58rem 1rem;
     padding: 1rem 1rem 1rem 1.5rem;
     width: 25rem;
     border-radius: 1rem;
@@ -46,12 +47,13 @@
 .contact__button{
     background: none;
     max-width: 25rem;
-    margin: 1rem;
+    margin: 1rem 1rem 3rem 1rem;
     padding: .4rem;
     border-radius: .7rem;
     border: 2px solid #59380D;
     color: #59380D;
     font-size: large;
+
 }
 
 .contact__button:hover{
