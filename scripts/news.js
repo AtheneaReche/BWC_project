@@ -9,6 +9,10 @@ let generoElegido = generos[Math.floor(Math.random() * 20)]
 fetch(`https://openlibrary.org/subjects/${generoElegido}.json?limit=10`)
 .then(res => res.json())
 .then(data => imprimirLibros(data))
+.catch(error => {
+    console.error("Hubo un error al obtener los datos:", error);
+    alert("Ocurrió un problema al obtener los libros. Intenta de nuevo más tarde.");
+})
 
 
 function imprimirLibros(datos) { 
