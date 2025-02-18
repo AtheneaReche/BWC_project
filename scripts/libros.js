@@ -1,3 +1,5 @@
+import { createFooter } from "./footer.js";
+
 /* Seleccion en el HTML */
 const sectionSearch = document.querySelector(".section__search");
 const sectionSearchResults = document.querySelector(".section__search-results");
@@ -133,3 +135,7 @@ function loadingData(seccion) {
 
 createSearch();
 searchTip();
+
+/*SECCION FOOTER  */
+const footer=document.querySelector(".footer");
+createFooter("#","url",footer); //-------------------------INCORPORAR LINKS

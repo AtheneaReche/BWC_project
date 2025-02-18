@@ -1,3 +1,5 @@
+import { createFooter } from "./footer.js";
+
 const back=document.querySelector(".back__container");
 back.innerHTML=`<a class="c_Brown" href="./libros.html">Volver atrás</a>`;
 
@@ -62,3 +64,7 @@ sectionCartBook.appendChild(bookDetails)
     }
 
 fetchBookDetails();
+
+/*SECCION FOOTER  */
+const footer=document.querySelector(".footer");
+createFooter("../pages/libros.html","url",footer); //-------------------------INCORPORAR LINKS
