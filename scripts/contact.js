@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const footer=document.querySelector(".footer");
+createFooter("url","url",footer); //-------------------------INCORPORAR LINKS
