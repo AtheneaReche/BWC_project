@@ -24,7 +24,7 @@ function navbar() {
     const links = [
         { text: "Libros", url: "../pages/libros.html" }, // Insert link here
         { text: "Eventos", url: "../pages/events.html" },
-        { text: "Contacto", url: "#" } // Insert link here
+        { text: "Contacto", url: "../pages/contact.html" } // Insert link here
     ];
 
     links.forEach(link => {
