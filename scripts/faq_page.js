@@ -100,5 +100,5 @@ import { createFooter } from "./footer.js";
     faqItems(faq);
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/books.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); 
     /** END FAQ SECTION */

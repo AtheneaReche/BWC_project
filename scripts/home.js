@@ -93,7 +93,7 @@ const divHeadingNews= document.createElement("div");
     divHeadingNews.classList.add("news__heading");
     divHeadingNews.innerHTML=`
         <h3 class="subtitle c_Brown news__heading-title">Novedades</h3>
-        <a href="" class="news__heading-more c_Orange">Ver más</a>`
+        <a href="./pages/news.html" class="news__heading-more c_Orange">Ver más</a>`
 sectionNews.appendChild(divHeadingNews)
 
 const newsTitles=[
@@ -109,7 +109,6 @@ const newsTitles=[
     }
 ]
 
-/*-------------------------------INCORPORAR LINK A PAGINA NOVEDADES  */
 function createNewsSection(array){
     const div=document.createElement("div");
     div.classList.add("news__container-titles");
@@ -133,7 +132,8 @@ function createNewsSection(array){
 }
 
 createNewsSection(newsTitles)
+/* FIN SECCION  NOVEDADES */
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("pages/books.html","pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("pages/books.html","pages/contact.html",footer); 

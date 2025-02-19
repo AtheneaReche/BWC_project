@@ -33,7 +33,6 @@ sectionCartBook.appendChild(bookDetails)
             const publishDate = firstEdition.publish_date || "No disponible";
             const editionsCount = editionsData.size || "No disponible";
 
-            // Obtener cantidad autores
             let cantAuthors;
             if(libro.authors.length>1){
                 cantAuthors="Autores"
@@ -41,8 +40,6 @@ sectionCartBook.appendChild(bookDetails)
                 cantAuthors="Autor";
             }
 
-
-            // Mostrar detalles en la página
             bookDetails.innerHTML = `
                 <div class="cart-book_details-image">
                     ${libro.covers ? `<img src="https://covers.openlibrary.org/b/id/${libro.covers[0]}-M.jpg" alt="${bookTitle}">` : 
@@ -66,4 +63,4 @@ fetchBookDetails();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/books.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); 

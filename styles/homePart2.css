@@ -38,7 +38,10 @@ a{
     text-align: center;
     align-items: center;
 }
-
+.recommendeds__options:hover, .news__heading-more:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--c-Orange);
+}
 .recommendeds__title{
     font-size: 30px;
     flex: 1;
@@ -91,7 +94,14 @@ a{
     text-align: center;
     text-shadow: 1px 1px 1px white;
     padding: 0px 50px;
+    transition: .4s color, .5s text-shadow;
 }
+.news__title:hover{
+    color: var(--c-Beige);
+    text-shadow: 2px 2px 2px var(--c-Orange);
+}
+/* FIN SECCION NOVEDADES */
+
 
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {

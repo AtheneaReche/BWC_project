@@ -36,13 +36,21 @@ a{
     text-align: center;
 }
 
+.footer__nav-list li a {
+    text-decoration: none;
+}
+
 .footer__nav-list__item {
     text-transform: uppercase;
     font-family: "Roboto", serif;
     font-size: 18px;
     letter-spacing: 1px;
-    color:#F5ECD7;
+    color:var(--c-Beige);
+    transition: .5s color;
     cursor: pointer;
+}
+.footer__nav-list__item:hover {
+    color: var(--c-Brown);
 }
 
 .footer__copyright{

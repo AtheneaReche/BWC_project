@@ -133,4 +133,4 @@ searchTip();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("#","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("#","../pages/contact.html",footer);
