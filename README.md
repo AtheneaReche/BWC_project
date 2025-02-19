@@ -5,7 +5,7 @@ EBIS Business Techschool
 ## Proyecto Final de Módulo I
 
 **Athenea Reche Enriquez**  
-**Karen Mari**  
+**Karen Belen Mari**  
 **Guillermo Pérez Mier**  
 
 ---
