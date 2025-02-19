@@ -1,7 +1,7 @@
 import { createFooter } from "./footer.js";
 
 const back=document.querySelector(".back__container");
-back.innerHTML=`<a class="c_Brown" href="./libros.html">Volver atrás</a>`;
+back.innerHTML=`<a class="c_Brown" href="./books.html">Volver atrás</a>`;
 
 
 const sectionCartBook=document.querySelector(".section__cart-book");
@@ -67,4 +67,4 @@ fetchBookDetails();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/books.html","url",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS

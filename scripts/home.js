@@ -1,5 +1,41 @@
 
-import { createFooter } from "./footer.js";
+ import { createFooter } from "./footer.js";
+/* HOME'S FIRST PART */
+    /** HERO SECTION */
+        const title = [
+            //Title, subtitle and button
+            {
+                name: "Evento de lectura",
+                date: "21 de Enero ~ 21 de Febrero",
+                buttonAttentionCall: "¡Apúntate!",
+                url: "../pages/events.html",
+                img: "./images/hero_event_image.png"
+            }
+        ]
+        const sectionHero = document.querySelector('.section__hero');
+
+        function heroItems (array) {
+            let heroDiv = document.createElement("div");
+                heroDiv.classList.add("hero__content");
+
+                array.forEach(element => {
+                    heroDiv.innerHTML += `
+                        <div class = "hero__subtitle">
+                            <h1 class = "title c_Yellow">${element.name}</h1>
+                            <h2 class = "subtitle subtitle__padding c_Orange"> ${element.date} </h2>
+                            <button class = "general_button" onclick = "location.href = '../pages/events.html'"> ${element.buttonAttentionCall} </button>
+                        </div>
+                        <div class = "hero__image">
+                            <img src = "${element.img}" alt = "${element.name}">
+                        </div>
+                        `
+                })
+                sectionHero.appendChild(heroDiv);
+        }
+        heroItems(title);
+    /** END HERO SECTION */
+/* END FIRST PART */
+
 /* Inicio Segunda parte de la Home */
 
 /* SECCION RECOMENDADOS */
@@ -8,19 +44,19 @@ const recommendeds=[
         nombre:"Best Sellers",
         nombreDeskopt:"Best <br> Sellers",
         img:"./images/best-sellers.png",
-        url:"Agregar Link"
+        url:"../pages/bestSellers.html"
     },
     {
         nombre:"Brandon Sanderson",
         nombreDeskopt:"Brandon <br>Sanderson",
         img:"./images/best-fantasy.png",
-        url:"Agregar Link"
+        url:"../pages/fantasy.html"
     },
     {
         nombre:"Agatha Christie",
         nombreDeskopt:"Agatha <br>Christie",
         img:"./images/best-thriller.png",
-        url:"Agregar Link"
+        url:"../pages/thriller.html"
     }
 ]
 
@@ -63,11 +99,13 @@ sectionNews.appendChild(divHeadingNews)
 const newsTitles=[
     {
         nombre:"Nuevos títulos que están arrasando este Febrero 2025",
-        img:"./images/novedades.jpg"
+        img:"./images/novedades.jpg",
+        link: "../pages/news.html"
     },
     {
         nombre:"Títulos confirmados para Marzo 2025",
-        img:"./images/confirmados.jpg"
+        img:"./images/confirmados.jpg",
+        link: "../pages/news.html"
     }
 ]
 
@@ -80,7 +118,7 @@ function createNewsSection(array){
         <div class="news__options">
                 <div class="news__image">
                     <div class="news__overlay">
-                        <a href=""><h3 class="news__title ">${element.nombre}</h3> </a>
+                        <a href="${element.link}"><h3 class="news__title ">${element.nombre}</h3> </a>
                     </div>
                 </div>
         </div>`
@@ -91,11 +129,11 @@ function createNewsSection(array){
         image.style.backgroundImage=`url('${newsTitles[index].img}')`;
     })
     sectionNews.appendChild(div);
-    
+
 }
 
 createNewsSection(newsTitles)
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/books.html","url",footer); //-------------------------INCORPORAR LINKS
+createFooter("pages/books.html","pages/contact.html",footer); //-------------------------INCORPORAR LINKS

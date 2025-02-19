@@ -1,5 +1,6 @@
 @import url('general.css');
 @import url('footer.css');
+@import url('nav.css');
 
 a{
     text-decoration: none;
@@ -120,7 +121,7 @@ a{
 }
 
 .min-height{
-    height: 50vh;
+    height: 40vh;
 }
 .d-none{
     display: none;

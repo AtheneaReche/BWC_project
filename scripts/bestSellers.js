@@ -16,7 +16,6 @@ const bestSellers = [
 async function fetchBookInfo(title) {
     const response = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(title)}`);
     const data = await response.json();
-    console.log(data.docs[0])
     return data.docs[0] || null;
 }
 
@@ -57,4 +56,4 @@ loadBooks();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("./books.html","url",footer);
+createFooter("./books.html","../pages/contact.html",footer);
