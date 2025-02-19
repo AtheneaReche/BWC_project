@@ -1,4 +1,4 @@
-/* 🟤 NAVBAR BASE */
+/* NAVBAR */
 .nav-bar {
     background-color: #F5ECD7;
     display: flex;
@@ -8,26 +8,51 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+        @media (max-width: 768px) {
+                padding: 1rem 2rem;
+        }
 }
 
-/* 🟠 LOGO */
+/* LOGO */
 .logo-container img {
     width: 100px;
     height: 100px;
     cursor: pointer;
 }
-
-/* 🔗 ENLACES DEL NAVBAR */
+/* NAVBAR LINKS */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 3rem;
     margin: 0;
     padding: 0;
+
+        @media(max-width: 768px){
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80%;
+                right: 0;
+                width: 30%;
+                background-color: #F5ECD7;
+                padding: 1rem;
+                border-radius: 1rem;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                gap: 1rem;
+        
+        }
+        @media (max-width: 576px){
+            width: 55%;
+        }
 }
 
 .nav-links li {
     display: inline-block;
+
+        @media (max-width: 768px) {
+            text-align: left;
+            padding: .5rem;
+        }
 }
 
 .nav-links a {
@@ -46,55 +71,43 @@
 
 .nav-icon{
     display:none;
+        @media (max-width: 768px){
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+}
+.menu-toggle {
+    display: none;
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #D47A56;
+            cursor: pointer;
+        }
 }
 
-/* 📱 RESPONSIVE: MENU COLLAPSABLE */
+/* COLLAPSABLE MENU */
 @media (max-width: 768px) {
-    .nav-bar {
-        padding: 1rem 2rem;
-    }
-
-    /* 📌 Botón hamburguesa */
-    .menu-toggle {
-        display: block;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: #D47A56;
-        cursor: pointer;
-    }
-
-    /* Ocultar menú por defecto */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #F5ECD7;
-        padding: 1rem;
-        border-radius: 1rem;
-    }
-
-    /* Mostrar menú cuando se active */
+    /* SHOW COLLAPSABLE MENU */
     .nav-links.show {
         display: flex;
     }
-
-    .nav-links li {
-        text-align: left;
-        padding: 1rem;
-    }
-
-    /* ✅ MOSTRAR ICONOS SOLO EN EL MENÚ DESPLEGABLE */
-    .nav-icon {
+    .nav-item{
         display: flex;
-        font-size: 1.5rem;
-        margin-right: 0.5rem;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    /* Ajuste del icono cuando se abre el menú */
+    /* SHOW COLLAPSABE MANU ICONS */
+    .nav-icon img {
+        width: 24px; 
+        height: 24px;
+    }
+
+    /* ADJUST ICON SIZE */
     .menu-toggle:focus {
         outline: none;
     }
