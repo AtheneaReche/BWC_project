@@ -44,19 +44,19 @@ const recommendeds=[
         nombre:"Best Sellers",
         nombreDeskopt:"Best <br> Sellers",
         img:"./images/best-sellers.png",
-        url:"Agregar Link"
+        url:"../pages/bestSellers.html"
     },
     {
         nombre:"Mejores de Ficción",
-        nombreDeskopt:"Mejores de<br>Ficción",
+        nombreDeskopt:"Mejor autor de<br>Fantasía",
         img:"./images/best-fiction.png",
-        url:"Agregar Link"
+        url:"../pages/fantasy.html"
     },
     {
         nombre:"Mejores Cómics y Novela Gráfica",
-        nombreDeskopt:"Mejores <br>Cómics",
-        img:"./images/best-comics.png",
-        url:"Agregar Link"
+        nombreDeskopt:"Mejor autora de <br>Thriller",
+        img:"../images/thriller.png",
+        url:"../pages/thriller.html"
     }
 ]
 
@@ -99,11 +99,13 @@ sectionNews.appendChild(divHeadingNews)
 const newsTitles=[
     {
         nombre:"Nuevos títulos que están arrasando este Febrero 2025",
-        img:"./images/novedades.jpg"
+        img:"./images/novedades.jpg",
+        link: "../pages/news.html"
     },
     {
         nombre:"Títulos confirmados para Marzo 2025",
-        img:"./images/confirmados.jpg"
+        img:"./images/confirmados.jpg",
+        link: "../pages/news.html"
     }
 ]
 
@@ -116,7 +118,7 @@ function createNewsSection(array){
         <div class="news__options">
                 <div class="news__image">
                     <div class="news__overlay">
-                        <a href=""><h3 class="news__title ">${element.nombre}</h3> </a>
+                        <a href="${element.link}"><h3 class="news__title ">${element.nombre}</h3> </a>
                     </div>
                 </div>
         </div>`
@@ -134,5 +136,5 @@ createNewsSection(newsTitles)
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","url",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
 

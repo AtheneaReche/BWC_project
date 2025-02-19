@@ -57,4 +57,4 @@ loadBooks();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("./libros.html","url",footer);
+createFooter("./libros.html","../pages/contact.html",footer);
