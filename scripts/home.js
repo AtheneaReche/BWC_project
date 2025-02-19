@@ -11,15 +11,15 @@ const recommendeds=[
         url:"Agregar Link"
     },
     {
-        nombre:"Mejores de Ficción",
-        nombreDeskopt:"Mejores de<br>Ficción",
-        img:"./images/best-fiction.png",
+        nombre:"Brandon Sanderson",
+        nombreDeskopt:"Brandon <br>Sanderson",
+        img:"./images/best-fantasy.png",
         url:"Agregar Link"
     },
     {
-        nombre:"Mejores Cómics y Novela Gráfica",
-        nombreDeskopt:"Mejores <br>Cómics",
-        img:"./images/best-comics.png",
+        nombre:"Agatha Christie",
+        nombreDeskopt:"Agatha <br>Christie",
+        img:"./images/best-thriller.png",
         url:"Agregar Link"
     }
 ]
