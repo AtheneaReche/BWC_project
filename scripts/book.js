@@ -32,7 +32,6 @@ sectionCartBook.appendChild(bookDetails)
             const firstEdition = editionsData.entries?.[0] || {};
             const publishDate = firstEdition.publish_date || "No disponible";
             const editionsCount = editionsData.size || "No disponible";
-            console.log(libro)
 
             // Obtener cantidad autores
             let cantAuthors;

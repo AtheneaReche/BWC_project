@@ -8,7 +8,7 @@ const sectionTips = document.querySelector(".section__tips");
 /*SECCION DE BUSQUEDA*/
 function createSearch() {
     sectionSearch.innerHTML = `
-                <h1 class="section__search-title subtitle c_Brown">Busca un libro</h1>
+                <h1 class="section__search-title c_Brown">Busca un libro</h1>
                 <div class="search__container">
                     <div class="search__container-inputs">
                         <input type="text" class="search__container-input search__container-input_name" placeholder="Nombre del libro">
