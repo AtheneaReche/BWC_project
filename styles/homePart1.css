@@ -10,7 +10,10 @@
 .hero__image img{
     width: 32.5rem;
     height: auto;
-     @media(max-width:992px){
+     @media(max-width:576px){
         width: 20rem;
+    } 
+    @media(max-width:320px){
+        width: 15rem;
     } 
 }

@@ -1,39 +1,101 @@
-.nav-bar{
+/* 🟤 NAVBAR BASE */
+.nav-bar {
     background-color: #F5ECD7;
     display: flex;
     justify-content: space-between;
-    padding: 0.625rem 5rem;
+    align-items: center;
+    padding: 1rem 5rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.nav-bar .logo-container{
-   display: flex;
-   align-items: center;
 
-}
-.nav-bar .logo-container img{
+/* 🟠 LOGO */
+.logo-container img {
     width: 100px;
     height: 100px;
     cursor: pointer;
 }
-.nav-bar ul{
+
+/* 🔗 ENLACES DEL NAVBAR */
+.nav-links {
     list-style: none;
     display: flex;
     gap: 3rem;
-    padding: 0;
     margin: 0;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
+    padding: 0;
 }
-.nav-bar ul li a{
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
     color: #59380D;
     text-decoration: none;
     font-size: 1.125rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: .5rem;
 }
-.nav-bar ul li a:hover {
+
+.nav-links a:hover {
     color: #E1A8A8;
+}
+
+.nav-icon{
+    display:none;
+}
+
+/* 📱 RESPONSIVE: MENU COLLAPSABLE */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 1rem 2rem;
+    }
+
+    /* 📌 Botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #D47A56;
+        cursor: pointer;
+    }
+
+    /* Ocultar menú por defecto */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F5ECD7;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    /* Mostrar menú cuando se active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    /* ✅ MOSTRAR ICONOS SOLO EN EL MENÚ DESPLEGABLE */
+    .nav-icon {
+        display: flex;
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* Ajuste del icono cuando se abre el menú */
+    .menu-toggle:focus {
+        outline: none;
+    }
 }
