@@ -1,39 +1,113 @@
-.nav-bar{
+/* NAVBAR */
+.nav-bar {
     background-color: #F5ECD7;
     display: flex;
     justify-content: space-between;
-    padding: 0.625rem 5rem;
+    align-items: center;
+    padding: 1rem 5rem;
     position: sticky;
     top: 0;
-    z-index: 1000;
+        @media (max-width: 768px) {
+                padding: 1rem 2rem;
+        }
 }
-.nav-bar .logo-container{
-   display: flex;
-   align-items: center;
 
-}
-.nav-bar .logo-container img{
+/* LOGO */
+.logo-container img {
     width: 100px;
     height: 100px;
     cursor: pointer;
 }
-.nav-bar ul{
+/* NAVBAR LINKS */
+.nav-links {
     list-style: none;
     display: flex;
     gap: 3rem;
-    padding: 0;
     margin: 0;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
+    padding: 0;
+
+        @media(max-width: 768px){
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80%;
+                right: 0;
+                width: 30%;
+                background-color: #F5ECD7;
+                padding: 1rem;
+                border-radius: 1rem;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                gap: 1rem;
+        
+        }
+        @media (max-width: 576px){
+            width: 55%;
+        }
 }
-.nav-bar ul li a{
+
+.nav-links li {
+    display: inline-block;
+
+        @media (max-width: 768px) {
+            text-align: left;
+            padding: .5rem;
+        }
+}
+
+.nav-links a {
     color: #59380D;
     text-decoration: none;
     font-size: 1.125rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: .5rem;
 }
-.nav-bar ul li a:hover {
+
+.nav-links a:hover {
     color: #E1A8A8;
+}
+
+.nav-icon{
+    display:none;
+        @media (max-width: 768px){
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+}
+.menu-toggle {
+    display: none;
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #D47A56;
+            cursor: pointer;
+        }
+}
+
+/* COLLAPSABLE MENU */
+@media (max-width: 768px) {
+    /* SHOW COLLAPSABLE MENU */
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* SHOW COLLAPSABE MANU ICONS */
+    .nav-icon img {
+        width: 24px; 
+        height: 24px;
+    }
+
+    /* ADJUST ICON SIZE */
+    .menu-toggle:focus {
+        outline: none;
+    }
 }
