@@ -27,9 +27,15 @@ function navbar() {
           ul.classList.add("nav-links");
 
     const links = [
+<<<<<<< HEAD
         { text: "Libros", url: "#", icon: "/images/collapsableMenu-books.png", dropdown: true },
         { text: "Eventos", url: "../pages/events.html", icon: "/images/collapsableMenu-Event.png" },
         { text: "Contacto", url: "../pages/contact.html", icon: "/images/collapsableMenu-mail.png" }
+=======
+        { text: "Libros", url: "../pages/books.html" }, 
+        { text: "Eventos", url: "../pages/events.html" },
+        { text: "Contacto", url: "../pages/contact.html" } 
+>>>>>>> 75a8b41aead41356e9af39c9cf3050d2eddeeb84
     ];
 
     links.forEach(link => {
@@ -61,7 +67,7 @@ function navbar() {
             a.classList.add("libros-link")
             
             const dropdownItems = [
-                { text: "Búsqueda avanzada", url: "../pages/books.html" },
+                { text: "Búsqueda avanzada", url: "../pages/libros.html" },
                 { text: "Búsqueda por géneros", url: "../pages/genres.html" }
             ];
             
