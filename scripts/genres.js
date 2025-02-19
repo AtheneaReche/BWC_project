@@ -14,13 +14,13 @@ import { createFooter } from "./footer.js";
         },
         {
             name: "Cómic y Novela Gráfica",
-            img:"../images/best-comics.png",
+            img:"../images/best-thriller.png",
             dataGenre: "comic y novela grafica",
             longName:"true"
         },
         {
             name: "Fantasía y Ficción",
-            img:"../images/best-fiction.png",
+            img:"../images/best-fantasy.png",
             dataGenre: "fantasia y ficcion",
             longName:"true"
         },
