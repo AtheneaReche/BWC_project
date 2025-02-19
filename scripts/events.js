@@ -38,14 +38,14 @@ import { createFooter } from "./footer.js";
     const whatisSubtitle = [
         {
             name: "¿En qué consiste?",
-            text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>\
-            In finibus  bibendum sapien, ac congue sem consequat et.<br>\
-            Vestibulum ac ultrices  turpis. Suspendisse blandit sem ligula, sed lobortis metus elementum eu.<br>\
-            Proin vitae porttitor orci. Proin quis lacus dapibus mi pharetra  mollis.<br>\
-            Nunc mauris sem, porttitor sed ante eget, ullamcorper commodo  ex.<br>\
-            Integer porttitor aliquam sapien, non aliquam leo elementum nec.<br>\
-            Cras in est vitae orci varius ullamcorper ut quis ligula.<br>\
-            Donec  ullamcorper justo diam, nec tempor ante pellentesque in. ",
+            text: "En este evento literario online deberás retarte a ti mismo \
+            para leer <b>al menos 5 libros</b> en el periodo de tiempo establecido.<br>\
+            Cada participante elige títulos dentro de distintas categorías y comparte su\
+            experiencia en el canal de discord del evento.\
+            Al finalizar el desafío, se organizará un debate virtuales y sorteos exclusivos para \
+            los participantes.\
+            Este evento busca motivar la lectura y conectar a entusiastas de los \
+            libros en un espacio dinámico y enriquecedor. ",
         }
     ]
 
@@ -96,7 +96,7 @@ import { createFooter } from "./footer.js";
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div class="c_Orange accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <strong>¡Por supuesto!</strong> Siempre y cuando tengas en cuenta que deberás leer al menos 5 libros para clasificarte y poder acceder a la categoría de premios.
                         </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ import { createFooter } from "./footer.js";
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="c_Orange accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <strong>Depende de ti.</strong> Si te sientes cómodo/a llevando dos títulos a la vez, ¡adelante! ¡Tú pones tus propias reglas!
                         </div>
                         </div>
                     </div>
