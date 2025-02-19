@@ -47,15 +47,15 @@ const recommendeds=[
         url:"../pages/bestSellers.html"
     },
     {
-        nombre:"Mejores de Ficción",
-        nombreDeskopt:"Mejor autor de<br>Fantasía",
-        img:"./images/best-fiction.png",
+        nombre:"Brandon Sanderson",
+        nombreDeskopt:"Brandon <br>Sanderson",
+        img:"./images/best-fantasy.png",
         url:"../pages/fantasy.html"
     },
     {
-        nombre:"Mejores Cómics y Novela Gráfica",
-        nombreDeskopt:"Mejor autora de <br>Thriller",
-        img:"../images/thriller.png",
+        nombre:"Agatha Christie",
+        nombreDeskopt:"Agatha <br>Christie",
+        img:"./images/best-thriller.png",
         url:"../pages/thriller.html"
     }
 ]
@@ -136,5 +136,4 @@ createNewsSection(newsTitles)
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
-
+createFooter("pages/books.html","pages/contact.html",footer); //-------------------------INCORPORAR LINKS

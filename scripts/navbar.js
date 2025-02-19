@@ -27,9 +27,9 @@ function navbar() {
           ul.classList.add("nav-links");
 
     const links = [
-        { text: "Libros", url: "../pages/libros.html", icon: "/images/collapsableMenu-books.png" },
-        { text: "Eventos", url: "../pages/events.html", icon: "/images/collapsableMenu-Event.png" },
-        { text: "Contacto", url: "../pages/contact.html", icon: "/images/collapsableMenu-mail.png" }
+        { text: "Libros", url: "../pages/books.html" }, 
+        { text: "Eventos", url: "../pages/events.html" },
+        { text: "Contacto", url: "../pages/contact.html" } 
     ];
 
     links.forEach(link => {

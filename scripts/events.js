@@ -122,5 +122,5 @@ import { createFooter } from "./footer.js";
     /** END FAQ SECTION */
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer);
 /* END EVENTS PAGE*/
