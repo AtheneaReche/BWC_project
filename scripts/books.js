@@ -56,35 +56,30 @@ function searchBook(name, author) {
 
 
 function createResultsCarts(libro, seccion) {
-    let cantAutor = libro.author_name ? (libro.author_name.length > 1 ? "Autores" : "Autor") : "Autor desconocido";
-    let autor;
+    let textAuthor = libro.author_name ? (libro.author_name.length > 1 ? "Autores" : "Autor") : "Autor desconocido";
+    let author;
+
     if (libro.author_name && libro.author_name.length > 3) {
-        autor = libro.author_name.slice(0, 3).join(", ") + "...";
+        author = libro.author_name.slice(0, 3).join(", ") + "...";
     } else {
-        autor = libro.author_name ? libro.author_name.join(", ") : "Autor desconocido";
+        author = libro.author_name ? libro.author_name.join(", ") : "Autor desconocido";
     }
-    let title;
-    if(libro.title.length>40){
-        title=libro.title.slice(0, 40) + "...";
-    }else{
-        title=libro.title
-    }
-    let keyButton
-    let imgLibro;
-    if (libro.cover_i == undefined) {
-        imgLibro = "../images/novedades.jpg";
-        keyButton=Math.floor(Math.random() * 1000) + 1; /* para aquellos libros que no existia una clave existente en comun */
-    } else {
-        imgLibro = `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`;
-        keyButton=libro.cover_i
-    }
+
+    let title= libro.title.length > 40 ? libro.title.slice(0, 40) + "..." : libro.title;
+
+    let imgLibro = libro.cover_i
+    ? `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`
+    : "../images/novedades.jpg";
+
+    let keyButton = libro.cover_i || Math.floor(Math.random() * 1000) + 1;/* para aquellos libros que no existia una clave existente en comun */
+    
 
     const article = document.createElement("article");
     article.classList.add("search__result-book")
     article.innerHTML = `
                     <div class=search__result-book_inf>
                         <h3 class="result-book_inf-title c_Brown">${title}</h3>
-                        <p><strong>${cantAutor}:</strong> ${autor}</p>
+                        <p><strong>${textAuthor}:</strong> ${author}</p>
                         <p><strong>Año de Publicación:</strong> ${libro.first_publish_year || 'N/A'}</p>
                         <button class="book_inf-${keyButton} book_inf-btn" >Ver libro</button>
                     </div>
@@ -99,7 +94,7 @@ function createResultsCarts(libro, seccion) {
         const bookKey = encodeURIComponent(libro.key);
         const bookTitle = encodeURIComponent(libro.title || "Título no disponible");
         const bookAuthor = encodeURIComponent(libro.author_name ? libro.author_name.join(", ") : "Autor desconocido");
-        window.open(`libro.html?book=${bookKey}&title=${bookTitle}&author=${bookAuthor}`, "_blank");
+        window.open(`book.html?book=${bookKey}&title=${bookTitle}&author=${bookAuthor}`, "_blank");
     })
 }
 

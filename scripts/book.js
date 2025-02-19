@@ -67,4 +67,4 @@ fetchBookDetails();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","url",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","url",footer); //-------------------------INCORPORAR LINKS
