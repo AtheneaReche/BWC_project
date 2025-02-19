@@ -1,5 +1,6 @@
 @import url('general.css');
 @import url('footer.css');
+@import url('nav.css');
 
 a{
     text-decoration: none;
@@ -13,7 +14,7 @@ a{
     font-family: "Roboto", serif;
     font-weight: 700;
     border: 2px solid var(--c-Orange);
-    padding: 10px 30px;
+    padding: 0.625rem 1.875rem;
     transition: .4s background-color;
 }
 .back__container a:hover{
@@ -23,31 +24,35 @@ a{
 
 .page__cart-book_title{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 .section__cart-book_details{
     width: 80%;
     margin: 0 auto;
-    padding: 40px 0px;
+    padding: 2.5rem 0px;
 }
 
 .cart-book_details-image{
     text-align: center;
-    height: 250px;
+    height: 15.62rem;
 }
 .cart-book_details-image img{
     height: 95%;
 }
 .cart-book_details-text{
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Roboto", serif;
 }
 .cart-book_details-text p{
     margin: 5px 0px;
 }
 .book_details-text__title{
-    margin: 10px 0px 20px 0px;
+    margin: 0.625rem 0rem 1.25rem 0rem;
     text-align:center ;
-    font-size: 30px;
+    font-size: 1.875rem;
+}
+/* MIN HEIGHT */
+.min-height{
+    min-height: 100vh;
 }

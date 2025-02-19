@@ -3,7 +3,11 @@
 a{
     text-decoration: none;
 }
-
+.max-width__footer{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
 .footer {
     background-color: var(--c-Pink);
 }
@@ -15,7 +19,7 @@ a{
 .footer__nav-list {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }
 
 .footer__nav-list li:nth-child(2) {
@@ -32,25 +36,36 @@ a{
     text-align: center;
 }
 
+.footer__nav-list li a {
+    text-decoration: none;
+}
+
 .footer__nav-list__item {
     text-transform: uppercase;
     font-family: "Roboto", serif;
     font-size: 18px;
     letter-spacing: 1px;
-    color:#6e6d6b;/* SELECCIONAR COLOR */
-    color:#F5ECD7;
+    color:var(--c-Beige);
+    transition: .5s color;
     cursor: pointer;
+}
+.footer__nav-list__item:hover {
+    color: var(--c-Brown);
 }
 
 .footer__copyright{
     padding: 25px 0px 5px 0px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
 }
 
 .footer__btn {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .d-none {
@@ -80,6 +95,10 @@ a{
     overflow-y: auto;
 }
 .footer__modal-title{
+    font-family: "Roboto", serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -101,3 +120,58 @@ a{
     padding: 15px 80px;
     font-size: inherit;
 }
+
+/* MEDIA QUERY */
+@media (max-width: 1024px) {
+
+    .footer__nav-list li {
+        width: 250px;
+    }
+
+    .footer__nav-list__item {
+        font-size: 15px;
+    }
+    .footer__modal-content{
+        max-width: 70%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer__modal-content {
+        max-width: 85%;
+    }
+    .footer__nav-list__item {
+        font-size: 14px;
+    }
+    .footer__modal-title{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__modal-content{
+        padding: 20px 10px;
+    }
+    .footer__modal-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    .footer__nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer__nav-list li {
+        text-align: center;
+    }
+    .footer__copyright{
+        justify-content: center;
+    }
+    .footer__copyright p:first-child{
+        padding-right: 10px;
+    }
+}
+
+

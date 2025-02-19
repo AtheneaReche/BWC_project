@@ -50,4 +50,4 @@ function imprimirLibros(datos) {
 
 
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); 

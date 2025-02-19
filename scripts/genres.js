@@ -158,4 +158,4 @@ import { createFooter } from "./footer.js";
 /* END GENRES PAGE*/
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS

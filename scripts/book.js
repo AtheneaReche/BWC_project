@@ -1,7 +1,7 @@
 import { createFooter } from "./footer.js";
 
 const back=document.querySelector(".back__container");
-back.innerHTML=`<a class="c_Brown" href="./libros.html">Volver atrás</a>`;
+back.innerHTML=`<a class="c_Brown" href="./books.html">Volver atrás</a>`;
 
 
 const sectionCartBook=document.querySelector(".section__cart-book");
@@ -32,9 +32,7 @@ sectionCartBook.appendChild(bookDetails)
             const firstEdition = editionsData.entries?.[0] || {};
             const publishDate = firstEdition.publish_date || "No disponible";
             const editionsCount = editionsData.size || "No disponible";
-            console.log(libro)
 
-            // Obtener cantidad autores
             let cantAuthors;
             if(libro.authors.length>1){
                 cantAuthors="Autores"
@@ -42,8 +40,6 @@ sectionCartBook.appendChild(bookDetails)
                 cantAuthors="Autor";
             }
 
-
-            // Mostrar detalles en la página
             bookDetails.innerHTML = `
                 <div class="cart-book_details-image">
                     ${libro.covers ? `<img src="https://covers.openlibrary.org/b/id/${libro.covers[0]}-M.jpg" alt="${bookTitle}">` : 
@@ -67,4 +63,4 @@ fetchBookDetails();
 
 /*SECCION FOOTER  */
 const footer=document.querySelector(".footer");
-createFooter("../pages/libros.html","../pages/contact.html",footer); //-------------------------INCORPORAR LINKS
+createFooter("../pages/books.html","../pages/contact.html",footer); 
